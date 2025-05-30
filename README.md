@@ -1,3 +1,5 @@
+![Cypress Tests](https://github.com/<your-username>/<your-repo>/actions/workflows/cypress.yml/badge.svg)
+
 # Cypress E2E Test Suite - Demoblaze Sample Site
 
 This repository contains an end-to-end (E2E) test suite using **Cypress** with **TypeScript** for automated UI testing on the [Demoblaze demo site](https://www.demoblaze.com).
