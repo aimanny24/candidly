@@ -14,9 +14,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
         with:
-          build: npm install
-          start: npm start
           command: npx cypress run
