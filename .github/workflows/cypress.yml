@@ -24,27 +24,3 @@ jobs:
         env:
           CYPRESS_username: ${{ secrets.CYPRESS_USERNAME }}
           CYPRESS_password: ${{ secrets.CYPRESS_PASSWORD }}
-
-      - name: Upload Cypress screenshots (if test fails)
-        if: failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-
-      - name: Upload Cypress videos (if test fails)
-        if: failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-videos
-          path: cypress/videos
-                - name: Save Cypress output
-        run: |
-          npx cypress run > cypress-results.txt
-        continue-on-error: true
-
-      - name: Upload results
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-results
-          path: cypress-results.txt
