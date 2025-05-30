@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Cypress generated files
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Environment variables
+cypress.env.json
+.env
+
+# VSCode config (optional)
+.vscode/
