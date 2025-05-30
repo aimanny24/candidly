@@ -1,21 +1,18 @@
 /// <reference types="cypress" />
 
-describe('TC006 - Add Product to Cart and View Cart Details', () => {
+describe('Add Product to Cart and View Cart Details', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.clearCookies();
     cy.clearLocalStorage();
   });
 
-  it('add MacBook Pro to cart and validate cart contents', () => {
+  it('Test case: Add MacBook Pro product to the cart and validate cart contents', () => {
 
     cy.url().should('include', 'demoblaze.com');
     
     cy.contains('Laptops').click();
     
-    // Find laptop item 'MacBook Pro'
-    // cy.contains('.card-title', 'MacBook Pro').should('be.visible');
-
     cy.wait(5000)
     
     cy.get('.card-title a').contains('MacBook Pro').click();

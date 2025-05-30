@@ -6,7 +6,7 @@ describe('User Login', () => {
     cy.clearLocalStorage();
   });
 
-  it('should log in with valid credentials', () => {
+  it('Test case: User should be able to log in with valid credentials', () => {
     cy.visit('https://www.demoblaze.com');
 
     cy.get('#login2').click();

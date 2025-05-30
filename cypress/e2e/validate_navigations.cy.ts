@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('TC005 - Validate Navigation and Modal Interactions', () => {
+describe('Validate navigation and modal interactions', () => {
   beforeEach(function () {
     cy.visit('/');
     cy.clearCookies();
@@ -12,7 +12,7 @@ describe('TC005 - Validate Navigation and Modal Interactions', () => {
     });
   });
 
-  it('should validate home and contact navigation, message form, and about modal', function () {
+  it('Test case: should be able to validate home and contact navigation, message form, and about modal', function () {
     cy.contains('Home').click();
     cy.url().should('eq', 'https://www.demoblaze.com/index.html');
 
